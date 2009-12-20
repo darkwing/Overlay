@@ -1,7 +1,7 @@
 name:  Overlay
 author:  davidwalsh
-current:  
-category:  
-tags:  []
-docs:  
-demo:  
+current:  0.5
+category:  Effects
+tags:  [overlay,opacity,tween,fx]
+docs:  http://davidwalsh.name/js/overlay
+demo:  http://davidwalsh.name/js/overlay
