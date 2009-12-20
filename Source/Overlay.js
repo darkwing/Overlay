@@ -23,7 +23,8 @@ var Overlay = new Class({
 		id: 'overlay',
 		color: '#000',
 		duration: 500,
-		opacity: 0.5/*,
+		opacity: 0.5,
+		zIndex: 5000/*,
 		onClick: $empty,
 		onClose: $empty,
 		onHide: $empty,
@@ -43,7 +44,7 @@ var Overlay = new Class({
 				background: this.options.color,
 				left: 0,
 				top: 0,
-				'z-index': 5000
+				'z-index': this.options.zIndex
 			},
 			events: {
 				click: function() {
@@ -68,11 +69,11 @@ var Overlay = new Class({
 		});
 	},
 	open: function() {
-		this.fireEvent('open')
+		this.fireEvent('open');
 		this.tween.start(this.options.opacity);
 	},
 	close: function() {
-		this.fireEvent('close')
+		this.fireEvent('close');
 		this.tween.start(0);
 	}
 });
