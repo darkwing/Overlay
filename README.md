@@ -10,7 +10,7 @@ How to Use
 
 Overlay may be initialized at any time.  The first and only required argument is the overlay's "container" which is usually document.body.  Options may be given as the second argument.
 
-Overlay also provides
+Overlay also provides click, close, hide, open, and show events.
 	
 ### Javascript
 	var overlay = new Overlay(document.body,{
