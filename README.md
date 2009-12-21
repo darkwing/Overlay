@@ -21,7 +21,7 @@ Overlay also provides click, close, hide, open, and show events.
 			onClick: function() {
 				this.close();
 			},
-			onShow: function() {
+			onOpen: function() {
 				//make ajax call while the overlay is happening...?
 				//var Request = new Request()....
 			}
