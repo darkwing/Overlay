@@ -70,9 +70,11 @@ var Overlay = new Class({
 	open: function() {
 		this.fireEvent('open');
 		this.tween.start(this.options.opacity);
+		return this;
 	},
 	close: function() {
 		this.fireEvent('close');
 		this.tween.start(0);
+		return this;
 	}
 });
