@@ -42,7 +42,7 @@ var Overlay = new Class({
 		this.bound = {
 			'window': {
 				resize: this.resize.bind(this),
-				scroll: this.scroll.bind(this),
+				scroll: this.scroll.bind(this)
 			},			
 			overlayClick: this.overlayClick.bind(this),
 			tweenStart: this.tweenStart.bind(this),
