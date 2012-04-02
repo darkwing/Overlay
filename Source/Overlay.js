@@ -111,15 +111,17 @@ var Overlay = new Class({
 	},
 
 	open: function(){
-		this.fireEvent('open');
-		this.tween.start(this.options.opacity);
-		return this;
+		var me = this;
+		me.fireEvent('opening');
+		me.tween.start(me.options.opacity).chain(function(){me.fireEvent('open');});
+		return me;
 	},
 
 	close: function(){
-		this.fireEvent('close');
-		this.tween.start(0);
-		return this;
+		var me = this;
+		me.fireEvent('closing');
+		me.tween.start(0).chain(function(){me.fireEvent('close');});
+		return me;
 	},
 
 	resize: function(){
