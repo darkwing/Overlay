@@ -111,9 +111,13 @@ var Overlay = new Class({
 	},
 
 	open: function(){
-		this.fireEvent('open');
-		this.tween.start(this.options.opacity);
-		return this;
+		this.fireEvent('open'); 
+		var me = this;      
+		me
+      .tween
+      .start(this.options.opacity)
+      .chain(function(){me.fireEvent('show')});
+		return me;
 	},
 
 	close: function(){
